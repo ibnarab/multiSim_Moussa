@@ -39,6 +39,14 @@ object schema_chemin_hdfs {
         select * from refined_trafic.trafic_voix_sms where year=2023 limit 5
    */
 
+  /*
+                              Questions
+
+                    Table trusted_sicli.sico => liens jointure? nd, imsi, date_naissance_crypté =>  xxxx-x2-05,
+                    Table refined_trafic.trafic_data => traffic_data(filler? data_volume_outgoing? data_volume_incoming? data_volume?) c'est en octet
+                    Jointure par numero pour les autres tables?
+   */
+
 
 
 }

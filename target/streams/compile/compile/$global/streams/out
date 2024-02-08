@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\DIOP028957\IdeaProjects\multiSim\src\main\scala\fonctions\utils.scala:4:18: imported `constants' is permanently hidden by definition of object constants in package fonctions[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport fonctions.constants[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
