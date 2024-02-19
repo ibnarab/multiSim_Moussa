@@ -1,52 +1,27 @@
 package fonctions
 
-import java.util.Calendar
-
-import org.apache.spark.sql.types._
-
 object schema_chemin_hdfs {
 
-  /*
 
-      Age, sexe, segment de marché,
-      localisation jour , localisation nuit
-      Nbre de contact vers Orange, Expresso, Free. ( sur les 3 derniers mois )
-      Nbre de minutes d'appels vers Orange, Expresso, Free ( sur les 3 derniers mois )
-      Usage data (sur les 3 derniers mois )
-      Top 5 contact de chaque client  (sur les 3 derniers mois )
+        val table_dualsim               = "refined_seter.dataset_duallsim"
 
-   */
+        val table_trafic_voix_sms       = "refined_trafic.trafic_voix_sms"
 
-  // Age, sexe => trusted_sicli.sico (Age: date_naissance, sexe: numero_piece)
+        val table_daily_clients         = "refined_vue360.daily_clients"
 
-  //segment de marche => refined_reporting.segment_marche, refined_trafic.master_data (data_marche, segment_agr)
+        val table_location_daytime      = "refined_localisation.location_daytime"
 
-  // localisation jour , localisation nuit => refined_localisation.{location_daytime, location_nighttime} je prends quelles colonnes, yen a bcp?
+        val table_location_nighttime    = "refined_localisation.location_nighttime"
 
-  // Nbre d'appel de contact vers Orange, Expresso, Free  ( sur les 3 derniers mois ) op_called_msisdn : calcul du trafic refined_trafic.trafic_voix_sms par operateur aggréger, la colonne destination, mais ya des pays aussi, nombre d'appels oubien?
+        val table_trafic_data           = "refined_trafic.trafic_data"
 
-  // Nbre de minutes d'appels vers Orange, Expresso, Free ( sur les 3 derniers mois ): calcul du trafic voix_sms par operateur aggréger par minutes, nombre ou montant? en seconde
+        val chemin_table_finale         = "/dlk/osn/refined/Reporting/multisim"
 
-  // Usage data: refined_trafic.trafic_data, montant? en octets periode 3 derniers mois
+        val table_finale                = "refined_reporting.multisim"
 
-  // Top 5 contact de chaque client  (sur les 3 derniers mois ) ???? [77%][77%] (top operateur?)
+        val compression                 = "gzip"
 
-  /*
-        table trusted_cdr.cdrnm, refined_trafic.trafic_voix_sms(droite), refined_trafic.trafic_data, refined_trafic.master_data, refined_trafic.terminaux
-
-        select * from refined_seter.dataset_duallsim limit 5 gauche
-
-        select * from refined_trafic.trafic_voix_sms where year=2023 limit 5
-   */
-
-  /*
-                              Questions
-
-                    Table trusted_sicli.sico => liens jointure? nd, imsi, date_naissance_crypté =>  xxxx-x2-05,
-                    Table refined_trafic.trafic_data => traffic_data(filler? data_volume_outgoing? data_volume_incoming? data_volume?) c'est en octet
-                    Jointure par numero pour les autres tables?
-   */
-
+        val header                      =  true
 
 
 }
