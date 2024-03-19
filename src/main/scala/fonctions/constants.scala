@@ -8,7 +8,7 @@ object constants {
 
           SparkSession.builder
 
-          .appName("reconciliation")
+          .appName("multisim")
 
           .config("spark.hadoop.fs.defaultFS", "hdfs://bigdata")
 
@@ -19,5 +19,8 @@ object constants {
           .enableHiveSupport()
 
           .getOrCreate()
+
+
+        val mode_overwrite                    =     "overwrite"
 
 }

@@ -23,5 +23,6 @@ object schema_chemin_hdfs {
 
         val header                      =  true
 
+        val table_finale_mysql          = "MYSVENTEREBONDPRD.multisim_total"
 
 }

@@ -13,6 +13,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.apache.spark" %% "spark-hive" % sparkVersion,
   "com.typesafe" % "config" % "1.2.1",
+  "mysql" % "mysql-connector-java" % "8.0.17",
   "net.liftweb" %% "lift-json" % "3.1.1",
   "org.elasticsearch" %% "elasticsearch-spark-20" % "8.1.0"
 )
